@@ -18,9 +18,26 @@ This project demonstrates multi-task fine-tuning of BERT using LoRA (Low-Rank Ad
 
 ## Results
 
-- **Number of Trainable Parameters**: 2000 times lower than that of the full fine-tuned model.
-- **Model Performance**: Achieved comparable results to the fully fine-tuned BERT model across all tasks.
+- **Sentiment Analysis**:
+  - With LoRA: Accuracy of 91.39%
+  - Without LoRA: Accuracy of 92.24%
 
+- **Semantic Similarity**:
+  - With LoRA: RMSE of 0.72
+  - Without LoRA: RMSE of 0.66
+
+- **Question Answering**:
+  - With LoRA: 
+    - Answer Start Accuracy: 69.92%
+    - Answer End Accuracy: 73.41%
+  - Without LoRA:
+    - Answer Start Accuracy: 70.11%
+    - Answer End Accuracy: 74.67%
+
+- **Parameter Comparison**:
+  - Full Fine-Tuning: 109,928,453 trainable parameters × 3 tasks
+  - With LoRA: 151,301 trainable parameters only.
+    
 ## Observations
 
 The use of LoRA adapters allows for efficient fine-tuning with a reduced number of trainable parameters. Despite this, the model performs comparably to a fully fine-tuned BERT model, making it a cost-effective solution for multi-task learning.
