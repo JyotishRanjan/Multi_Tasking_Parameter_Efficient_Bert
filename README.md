@@ -30,9 +30,11 @@ This project demonstrates multi-task fine-tuning of BERT using LoRA (Low-Rank Ad
   - With LoRA: 
     - Answer Start Accuracy: 69.92%
     - Answer End Accuracy: 73.41%
+    - Token level Accuracy : 69.08%
   - Without LoRA:
     - Answer Start Accuracy: 70.11%
     - Answer End Accuracy: 74.67%
+    - Token level Accuracy : 69.31%
 
 - **Parameter Comparison**:
   - Full Fine-Tuning: 109,928,453 trainable parameters × 3 tasks
