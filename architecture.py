@@ -17,7 +17,7 @@ class BertForSEQCLF(nn.Module):
 class BertForTextSummarization(nn.Module):
     def __init__(self, hidden_size):
         super(BertForTextSummarization, self).__init__()
-        self.decoder = nn.Linear(hidden_size, hidden_size)  # You may want to use a more sophisticated decoder
+        self.decoder = nn.Linear(hidden_size, hidden_size) 
 
     def forward(self, sequence_output):
         return self.decoder(sequence_output)
